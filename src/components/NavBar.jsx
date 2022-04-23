@@ -1,8 +1,17 @@
-import React from 'react'
+import React from 'react';
+import {GrSchedules} from "react-icons/gr";
+import {Link} from "react-router-dom";
 
-function NavBar() {
+function NavBar({cartNum}) {
+  //const cartNum=0;
   return (
-    <div className='navBar'><a href="">Salon lepote</a></div>
+    <div className='navBar'>
+      <Link to='/'>Salon lepote</Link>
+      <Link className='cart-items' to='/appointments'>
+        <GrSchedules/>
+        <p className="cart-num">{cartNum}</p>
+      </Link>
+      </div>
   )
 }
 

@@ -2,14 +2,14 @@ import React from 'react';
 import {GrSchedules} from "react-icons/gr";
 import {Link} from "react-router-dom";
 
-function NavBar({cartNum}) {
-  //const cartNum=0;
+function NavBar({brojTermina}) {
+ 
   return (
     <div className='navBar'>
       <Link to='/'>Salon lepote</Link>
-      <Link className='cart-items' to='/appointments'>
+      <Link className='zakazani-termini' to='/appointments'>
         <GrSchedules/>
-        <p className="cart-num">{cartNum}</p>
+        <p className="broj-termina">{brojTermina}</p>
       </Link>
       </div>
   )
